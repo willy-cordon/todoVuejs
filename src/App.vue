@@ -4,28 +4,15 @@
     <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
   <div class="container">
-    <a class="navbar-brand" href="#">
-          <img src="http://placehold.it/150x50?text=Logo" alt="">
-        </a>
+    <h1 class="navbar-brand pt-3" href="#" >
+        <font-awesome-icon class="h1" icon="clipboard-check" />
+    </h1>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home
-                <span class="sr-only">(current)</span>
-              </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Services</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
-        </li>
+
       </ul>
       <Search v-on:query-change="querySearch" />
     </div>
@@ -36,14 +23,13 @@
     <div class="card p-3" id="main-container">
       <h2>Listado de tareas</h2>
       <TodoAdd v-on:add-todo="addTodo"/>
-      <span class="text-center h5" v-if="copyTodos.length <= 0" >Sin tareas por el momento</span>
+      <span class="text-center h5" v-if="copyTodos.length <= 0" >Sin tareas por el momento 🦾</span>
       <Todos v-else  v-bind:todoslist="copyTodos" v-on:delete-todo="deleteTodo" />
     </div>
   </div>
 </template>
 
 <script>
-//import HelloWorld from './components/HelloWorld.vue'
 import Search from './components/Search';
 import Todos from './components/Todos';
 import TodoAdd from './components/TodoAdd';

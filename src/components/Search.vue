@@ -17,7 +17,7 @@ export default {
 
 <style scoped>
     #search-container{
-        width: 600px;
+        width: 800px;
         margin: 0 auto;
     }
 

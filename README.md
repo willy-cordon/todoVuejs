@@ -1,4 +1,4 @@
-# vue-todos
+# Todo-list-vue
 
 ## Project setup
 ```
